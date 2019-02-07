@@ -5,40 +5,6 @@ Homework 2 Project 1
 */
 
 #include <iostream>
-<<<<<<< HEAD
-#include <std::string>
-using namespace std;
-
-double determineRate( int day, int startTime[] ){
-
-}
-
-int breakString( string startTime ){
-  string brokenString[2];
-  int timePlaced[] = {0, 0};
-  int index = startTime.find( ":" );
-
-  brokenString[0] = startTime.substr(0, index);
-  brokenString[1] = startTime.substr(index + 1, startTime.length() );
-
-  //parse strings to integers
-
-
-  return timePlaced;
-}
-
-int daySwitch( string dayString ){
-  //std::string var.compareTo()
-}
-
-bool continue( char continue ){
-  switch( continue ){
-    case 'y':
-    case 'Y':
-      return true;
-    case 'n':
-    case 'N':
-=======
 #include <string>
 using namespace std;
 
@@ -58,7 +24,6 @@ bool newCalculation( char continueChar ){
       return true;
     case 'N':
     case 'n':
->>>>>>> c1074b0c54d02c0aa78c73fca38ff157167834c4
       return false;
     default:
       return false;
@@ -66,7 +31,6 @@ bool newCalculation( char continueChar ){
 }
 
 int main(){
-<<<<<<< HEAD
   char continueChar(null);
   string dayString(null);
   string startTime(null);
@@ -99,23 +63,5 @@ int main(){
   }while( continue( continueChar ) );
 
   cout << endl;
-=======
-  do{
-    char firstLetter( null );
-    char secondLetter( null );
-    cout << "Enter the day of the week: "
-    cin >> firstLetter >> secondLetter;
-    cout << "Enter the time the call started: ";
-    cin >> callStart;
-    cout << "Enter the duration of the call in minutes: ";
-    cin >> duration;
-
-    rate = determineRate();
-
-    cout << "Would you like to perform a new calculation ( y/n )? ";
-    cin >> continueChar;
-  }while( newCalculation( continueChar ) );
-
->>>>>>> c1074b0c54d02c0aa78c73fca38ff157167834c4
   return 0;
 }

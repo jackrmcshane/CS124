@@ -5,7 +5,7 @@ Homework 2 Project 1
 */
 
 #include <iostream>
-#include <std::string>
+#include <string>
 using namespace std;
 
 double determineRate( string day, string startTime[] ){
@@ -14,7 +14,17 @@ double determineRate( string day, string startTime[] ){
   const double WEEKNIGHT = .25;
   const double WEEKEND = .15;
 
+  if( isWeekend( day ) ){ rate = WEEKEND; }
+  else{
+    if( ((startTime[0] < 8 || startTime[0] >= 6) && startTime[1] > 0) ){ rate = WEEKNIGHT; }
+    else{ rate = WEEDAY; }
+  }
 
+  return rate;
+}
+
+bool isWeekend( string day ){
+  if( day.compare( Su ) == 0 ){}
 }
 
 bool continue( char continueChar ){
