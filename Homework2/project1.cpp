@@ -5,6 +5,7 @@ Homework 2 Project 1
 */
 
 #include <iostream>
+<<<<<<< HEAD
 #include <std::string>
 using namespace std;
 
@@ -37,6 +38,27 @@ bool continue( char continue ){
       return true;
     case 'n':
     case 'N':
+=======
+#include <string>
+using namespace std;
+
+double calcCost(){
+  //use switch statement to determine rate instead?
+  const double WEEEKDAY = .4;
+  const double WEEKNIGHT = .25;
+  const double WEEKEND = .15;
+
+
+}
+
+bool newCalculation( char continueChar ){
+  switch ( continueChar ) {
+    case 'Y':
+    case 'y':
+      return true;
+    case 'N':
+    case 'n':
+>>>>>>> c1074b0c54d02c0aa78c73fca38ff157167834c4
       return false;
     default:
       return false;
@@ -44,6 +66,7 @@ bool continue( char continue ){
 }
 
 int main(){
+<<<<<<< HEAD
   char continueChar(null);
   string dayString(null);
   string startTime(null);
@@ -76,5 +99,23 @@ int main(){
   }while( continue( continueChar ) );
 
   cout << endl;
+=======
+  do{
+    char firstLetter( null );
+    char secondLetter( null );
+    cout << "Enter the day of the week: "
+    cin >> firstLetter >> secondLetter;
+    cout << "Enter the time the call started: ";
+    cin >> callStart;
+    cout << "Enter the duration of the call in minutes: ";
+    cin >> duration;
+
+    rate = determineRate();
+
+    cout << "Would you like to perform a new calculation ( y/n )? ";
+    cin >> continueChar;
+  }while( newCalculation( continueChar ) );
+
+>>>>>>> c1074b0c54d02c0aa78c73fca38ff157167834c4
   return 0;
 }
